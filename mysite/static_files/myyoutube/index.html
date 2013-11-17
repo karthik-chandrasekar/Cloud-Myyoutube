@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Minimal Django File Upload Example</title>   
+    </head>
+    <body>
+    <!-- List of uploaded documents -->
+    {% if files_url_list %}
+        <ul>
+        {% for url in files_url_list %}
+            <li><a href="{{ url }}">{{ url }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No documents.</p>
+    {% endif %}
+
+    <!-- Display the local db url values-->
+    {% if photos %}
+        <ul>
+        {% for url in photos %}
+            <li><a href="{{ url.url }}">{{ url.url }}</a></li>
+            <li>{{url.uploaded}}</li>
+            <li>{{url.name}}</li>
+            <li>{{url.rate}}</li>
+            <form action="/myyoutube/index/" method="post" enctype="multipart/form-data">
+                {%csrf_token%}
+                <select name="rate">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                <input type="submit" value="Rate"/>
+            </form>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No documents.</p>
+    {% endif %}
+
+
+        <!-- Upload form. Note enctype attribute! -->
+        <form action="/myyoutube/index/" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p><label for="file">Filename:</label></p>
+            <p><input type="file" name="file" id="file"><br></p>
+            <p><input type="submit" value="Upload" /></p>
+        </form>
+    </body>
+</html> 

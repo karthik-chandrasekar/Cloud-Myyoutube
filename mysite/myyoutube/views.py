@@ -8,6 +8,7 @@ from boto.s3.key import Key
 from django.template import RequestContext
 from datetime import datetime
 from models import AllVidFileUrl
+import math
 
 
 class UploadForm(forms.Form):
@@ -57,7 +58,8 @@ def index(request):
     if f.is_valid():     
         fil = request.FILES["file"]
         file_name = fil.name
-        p_obj = AllVidFileUrl(url="http://s3.amazonaws.com/rafmyyoutubebucket/", uploaded=datetime.now(), name=file_name, rate=0, rate_num=0)
+        
+        p_obj = AllVidFileUrl(url="http://d1nfhxlcn71vv.cloudfront.net/", uploaded=datetime.now(), name=file_name, rate=0, rate_num=0)
         p_obj.save()
         content = fil.read()
         store_in_s3(p_obj, content, b)
@@ -71,7 +73,7 @@ def index(request):
         for file_obj in AllVidFileUrl.objects.all():
             if file_obj.id==int(file_id):
                 file_obj.rate_num += 1
-                file_obj.rate = (file_obj.rate + int(r))/ file_obj.rate_num
+                file_obj.rate = math.ceil( ((file_obj.rate + int(r))/ file_obj.rate_num)*100)/100
                 file_obj.save()
        
     elif request.POST.get('delete'):

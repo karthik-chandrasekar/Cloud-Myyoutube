@@ -29,26 +29,282 @@ else
 	
 	}
 </script>
-		 
+	<style type="text/css">
+#upload
+{
+	width:130px;
+	text-align:center;
+	margin-left:45%;
+	}
+	#outerupload
+	{
+	width:100%;
+	height:200px;
+	background-color:#FFCC99;
+	padding-top:10px;
+	}
+	
+	#label{
+  width: 100px;
+  height: 50px;
+
+  }
+ .fileupload{
+   font-size: 20px;
+  }
+  #submit
+  {
+  font-size: 15px;
+  background-color: #FF9966;
+  }
+  #submit:hover{
+     background: #383;
+}
+#file_name
+{
+font-size:20px;
+}
+
+
+
+#rate
+{
+background-color: #99FF66;
+font-size:45px;
+width:80px;
+height:80px;
+margin:30px;
+border-style: solid;
+padding-left:5px;
+padding-top:8px;
+}
+
+
+.rate_button {
+
+	margin-top: 10px;
+	-moz-box-shadow:inset 0px 1px 9px 2px #97c4fe;
+	-webkit-box-shadow:inset 0px 1px 9px 2px #97c4fe;
+	box-shadow:inset 0px 1px 9px 2px #97c4fe;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3d94f6), color-stop(1, #1e62d0) );
+	background:-moz-linear-gradient( center top, #3d94f6 5%, #1e62d0 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');
+	background-color:#3d94f6;
+	-webkit-border-top-left-radius:16px;
+	-moz-border-radius-topleft:16px;
+	border-top-left-radius:16px;
+	-webkit-border-top-right-radius:16px;
+	-moz-border-radius-topright:16px;
+	border-top-right-radius:16px;
+	-webkit-border-bottom-right-radius:16px;
+	-moz-border-radius-bottomright:16px;
+	border-bottom-right-radius:16px;
+	-webkit-border-bottom-left-radius:16px;
+	-moz-border-radius-bottomleft:16px;
+	border-bottom-left-radius:16px;
+	text-indent:2.58px;
+	border:1px solid #337fed;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:23px;
+	font-weight:bold;
+	font-style:normal;
+	height:41px;
+	line-height:41px;
+	width:84px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #1570cd;
+	
+}
+.rate_button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1e62d0), color-stop(1, #3d94f6) );
+	background:-moz-linear-gradient( center top, #1e62d0 5%, #3d94f6 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6');
+	background-color:#1e62d0;
+}.rate_button:active {
+	position:relative;
+	top:1px;
+}
+
+
+select{
+  background:transparent;
+   width: 50px;
+   padding: 2px;
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:20px;
+   font-weight:600;
+   color:#fff;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 22px;
+  -webkit-appearance: none;
+   
+ 
+  }
+
+.select-div{
+	float:left;
+	margin: 20px;
+	width: 50px;
+	height: 25px;
+	overflow: hidden;
+	background: url(arrowhead.png) no-repeat right #363636;
+	border-top:#575757 1px solid;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	 -moz-border-radius: 4px 4px 4px 4px;
+		  border-radius: 4px 4px 4px 4px;
+	-webkit-box-shadow: inset 0 2px 4px rgba(107, 105, 105, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+	 -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+		  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+		  -moz-box-shadow:    0px 8px 3px -9px #000000;
+		  -webkit-box-shadow: 0px 8px 3px -9px #000000;
+		  box-shadow:         0px 8px 3px -9px #000000;
+}
+
+select > option {
+  background: grey;
+}
+
+.delete {
+	-moz-box-shadow:inset 0px 1px 9px 2px #f5978e;
+	-webkit-box-shadow:inset 0px 1px 9px 2px #f5978e;
+	box-shadow:inset 0px 1px 9px 2px #f5978e;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f) );
+	background:-moz-linear-gradient( center top, #f24537 5%, #c62d1f 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f');
+	background-color:#f24537;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-left-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+	border-top-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-left-radius:20px;
+	text-indent:2.58px;
+	border:1px solid #d02718;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:23px;
+	font-weight:bold;
+	font-style:normal;
+	height:40px;
+	line-height:40px;
+	width:100px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #810e05;
+}
+.delete:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537) );
+	background:-moz-linear-gradient( center top, #c62d1f 5%, #f24537 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537');
+	background-color:#c62d1f;
+}.delete:active {
+	position:relative;
+	top:1px;
+}
+
+#deletewrapper
+{
+padding-top: 20px;
+padding-left: 5px;
+}
+
+.upload {
+	-moz-box-shadow:inset 0px 1px 9px 2px #bee2f9;
+	-webkit-box-shadow:inset 0px 1px 9px 2px #bee2f9;
+	box-shadow:inset 0px 1px 9px 2px #bee2f9;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #63b8ee), color-stop(1, #468ccf) );
+	background:-moz-linear-gradient( center top, #63b8ee 5%, #468ccf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b8ee', endColorstr='#468ccf');
+	background-color:#63b8ee;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:2.58px;
+	border:1px solid #3866a3;
+	display:inline-block;
+	color:#14396a;
+	font-family:Arial;
+	font-size:23px;
+	font-weight:bold;
+	font-style:normal;
+	height:65px;
+	line-height:65px;
+	width:131px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #7cacde;
+	
+}
+.upload:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #468ccf), color-stop(1, #63b8ee) );
+	background:-moz-linear-gradient( center top, #468ccf 5%, #63b8ee 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee');
+	background-color:#468ccf;
+}.upload:active {
+	position:relative;
+	top:1px;
+}
+	</style>
     </head>
     <body>
+	<!-- Upload form. Note enctype attribute! -->
+		<div id="outerupload">
+		<center><h2> Choose a file to upload</h2></center>
+	  <div id="upload"> <form id="myform" name="myform" action="/myyoutube/index/" onsubmit="return Validate();" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+        
+            <div id="label"><input type="file" size='1' class='fileupload' name="file" id='filename' accept="video/*" capture></div>
+            <input type="submit" class="upload" value="Upload" id="submit"/>
+        </form>
+		</div>
+	</div>
 	<!-- Display the local db url values-->
-    {% if photos %}
-        <ul>
+<table>  
+  {% if photos %}
+        
         {% for url in photos %}
-            <li><a href="{{ url.url }}{{url.id}}">{{ url.url }}</a></li>
-			<video id="example_video_1" class="video-js vjs-default-skin"
-    controls preload="auto" width="500" 
+            <tr>
+			<td><p id="file_name"> {{url.name}} </p></td></tr>
+			<tr>
+			<td><video id="example_video_1" class="video-js vjs-default-skin"
+    controls preload="auto" width="750" 
 
     data-setup='{"example_option":true}'>
     <source src="{{url.url}}{{url.id}}" type='video/mp4' />
     
 </video>
-            <li>{{url.uploaded}}</li>
-            <li>{{url.name}}</li>
-            <li>{{url.rate}}</li>
+<br>
+<br>
+<hr>
+</td>
+           <td>
+		   
+      
+            <div id="rate">{{url.rate}}</div>
             <form action="/myyoutube/index/" method="post" enctype="multipart/form-data">
                 {%csrf_token%}
+				<div class = "select-div">
                 <select name="rate">
                   <option value="1{{url.id}}">1</option>
                   <option value="2{{url.id}}">2</option>
@@ -56,24 +312,25 @@ else
                   <option value="4{{url.id}}">4</option>
                   <option value="5{{url.id}}">5</option>
                 </select>
-                <input type="submit" value="Rate"/>
+				</div>
+                <input type="submit" value="Rate" class="rate_button"/>
             </form>
+			<p>{{url.rate_num}} users have rated this video </p>
+			<div id="deletewrapper">
 			<form action = "/myyoutube/index/" method="post" enctype="multipart/form-data">
 			{%csrf_token%}
-			<button name="delete" type="submit" value="{{url.id}}">Delete</button>
+			<button name="delete" class="delete" type="submit" value="{{url.id}}">Delete</button>
 			</form>
+			</div>
+			<p>Uploaded on: {{url.uploaded}}</p>
+			</td></tr>
+	
         {% endfor %}
-        </ul>
+    </table>    
     {% else %}
         <p>No documents.</p>
     {% endif %}
 
-        <!-- Upload form. Note enctype attribute! -->
-        <form id="myform" name="myform" action="/myyoutube/index/" onsubmit="return Validate();" method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            <p><label for="file">Filename:</label></p>
-            <p><input id="filename" type="file" name="file" id="file"><br></p>
-            <p><input type="submit" value="Upload" /></p>
-        </form>
+        
     </body>
 </html> 
